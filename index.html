@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Брокер по новостройкам на юге: Анапа, Сочи, Краснодар, Геленджик</title>
+<meta name="description" content="Брокер по новостройкам и инвестиционной недвижимости: Анапа, Сочи, Краснодар, Геленджик, Новороссийск, Адыгея. Онлайн-показ, дистанционная сделка, подбор и ипотека по новостройкам бесплатно.">
+<meta property="og:title" content="Купить на юге, не приезжая — брокер по новостройкам">
+<meta property="og:description" content="Онлайн-показ, дистанционная сделка, подбор и ипотека по новостройкам бесплатно. Подарок к каждой сделке.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#eef2f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='18' width='24' height='10' fill='%231c6b7a'/%3E%3Crect x='8' y='10' width='16' height='8' fill='%230d2530'/%3E%3Crect x='12' y='4' width='8' height='6' fill='%23d94a1c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Geologica:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+
+<header class="bar" id="bar">
+  <a class="logo" href="#top" aria-label="Недвижимость Юга, на главную">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect x="4" y="18" width="24" height="10" fill="#1c6b7a"/><rect x="8" y="10" width="16" height="8" fill="#0d2530"/><rect x="12" y="4" width="8" height="6" fill="#d94a1c"/></svg>
+    <span>Недвижимость Юга</span>
+  </a>
+  <nav class="bar__nav" aria-label="Разделы">
+    <a href="#where">Города</a><a href="#process">Этапы</a><a href="#gifts">Подарки</a><a href="#price">Смета</a><a href="#faq">Вопросы</a>
+  </nav>
+  <a class="btn btn--sm" href="#lead">Подобрать объект</a>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__text">
+    <h1 class="hero__title" aria-label="Купить на юге, не приезжая">
+      <span class="ln"><span class="w"><span>Купить</span></span> <span class="w"><span>на</span></span> <span class="w"><span>юге,</span></span></span>
+      <span class="ln"><span class="w"><span>не</span></span> <span class="w"><span>приезжая</span></span></span>
+    </h1>
+    <p class="hero__lead">Брокер по новостройкам и инвестиционной недвижимости на юге России. Покажем объект онлайн, проведём сделку дистанционно. Подбор и ипотека по новостройкам для вас бесплатны.</p>
+    <div class="hero__act">
+      <a class="btn mag" href="#lead">Подобрать объект</a>
+      <a class="link" href="#price">Смотреть смету сделки</a>
+    </div>
+    <dl class="hero__facts">
+      <div><dt>Подбор и ведение новостройки</dt><dd>0 ₽</dd></div>
+      <div><dt>Одобрение ипотеки на новостройку</dt><dd>0 ₽</dd></div>
+    </dl>
+  </div>
+  <figure class="hero__shot" id="shot">
+    <div class="hero__frame">
+      <img class="hero__img" src="assets/gelendzhik.jpg" width="1920" height="1437" alt="Геленджикская бухта с высоты: город, залив и горы" fetchpriority="high">
+    </div>
+    <figcaption class="live"><i class="live__dot" aria-hidden="true"></i><span>Онлайн-показ: Геленджикская бухта</span></figcaption>
+  </figure>
+</section>
+
+<!-- WHERE: elevation profile -->
+<section class="sec where" id="where">
+  <div class="head" data-r>
+    <h2>Десять мест, от моря до гор</h2>
+    <p class="head__p">Выберите точку на профиле: покажем, что подбираем в этом городе, и передадим выбор в заявку.</p>
+  </div>
+  <div class="prof-wrap" data-r>
+    <div class="prof" id="prof">
+      <svg class="prof__svg" id="profSvg" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div class="prof__pins" id="pins"></div>
+      <div class="prof__eye" id="eye" aria-hidden="true"><i></i></div>
+    </div>
+    <p class="prof__axis"><span>Море</span><span>Равнина</span><span>Горы</span></p>
+  </div>
+  <div class="pan" id="pan" data-r>
+    <div class="pan__txt" aria-live="polite">
+      <h3 class="pan__city" id="panCity">Анапа</h3>
+      <p class="pan__desc" id="panDesc"></p>
+      <p class="pan__tags" id="panTags"></p>
+      <a class="btn btn--ghost" id="panBtn" href="#lead">Подобрать в этом городе</a>
+    </div>
+    <div class="pan__media" id="panMedia">
+      <img class="pm pm--sea on" data-k="anapa" src="assets/anapa.jpg" width="1024" height="768" alt="Анапа: обрывистый берег Чёрного моря и город на горизонте" loading="lazy">
+      <img class="pm" data-k="gel" src="assets/gelendzhik.jpg" width="1920" height="1437" alt="Геленджик и бухта с высоты" loading="lazy">
+      <img class="pm" data-k="sochi" src="assets/sochi.jpg" width="1920" height="1079" alt="Сочи: парк и море на горизонте" loading="lazy">
+      <div class="pm pm--flat" data-k="inland"><p>Краснодар, Майкоп, Адыгея, Железноводск</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT -->
+<section class="sec kinds" id="kinds">
+  <div class="head" data-r>
+    <h2>Что подбираем</h2>
+    <p class="head__p">Для себя и семьи, для инвестиций и для бизнеса. Работаем и с частными лицами, и с компаниями.</p>
+  </div>
+  <div class="kinds__cols">
+    <ul class="klist" data-r>
+      <li class="klist__h">Для себя и семьи</li>
+      <li><b>Квартиры в новостройках</b><span>Подбор по бюджету, срокам сдачи и застройщику, на всех этапах сделки.</span></li>
+      <li><b>Дома</b><span>Готовые дома и частное строительство от 48 000 ₽ за м².</span></li>
+      <li><b>Курортная недвижимость</b><span>Квартиры и апартаменты у моря: для жизни, отдыха и сдачи.</span></li>
+      <li><b>Элитная недвижимость</b><span>Объекты премиум-сегмента и подарок к сделке: путёвка за границу.</span></li>
+    </ul>
+    <ul class="klist klist--b" data-r>
+      <li class="klist__h">Для инвестиций и бизнеса</li>
+      <li><b>Инвестиционная недвижимость</b><span>Подбор под вашу цель: доход от аренды или рост стоимости объекта.</span></li>
+      <li><b>Коммерческая недвижимость</b><span>Помещения под бизнес и аренду, проверка документов и сопровождение сделки.</span></li>
+      <li><b>Крупные промышленные объекты</b><span>Производственные и складские комплексы: ведём сделку на каждом этапе.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROCESS: 3D building -->
+<section class="scene" id="process">
+  <div class="scene__sticky">
+    <div class="scene__txt">
+      <h2 class="scene__h">Дом растёт вместе со сделкой</h2>
+      <p class="scene__sub">Листайте: каждый этап добавляет этаж. Цена этапа видна сразу.</p>
+      <ol class="steps" id="steps">
+        <li class="on"><h3>Заявка и подбор</h3><div class="st__more"><p>Вы рассказываете, что ищете. Мы отбираем объекты и присылаем подборку.</p><p class="price price--free">0 ₽ для вас на новостройках</p></div></li>
+        <li><h3>Онлайн-показ</h3><div class="st__more"><p>Показываем объект по видеосвязи: квартиру, двор, вид из окна и документы застройщика.</p><p class="price price--free">0 ₽</p></div></li>
+        <li><h3>Ипотека</h3><div class="st__more"><p>Готовим заявку и добиваемся одобрения. Решение принимает банк.</p><p class="price price--free">0 ₽ на новостройки, 5 000 ₽ на вторичку</p></div></li>
+        <li><h3>Юридическое сопровождение</h3><div class="st__more"><p>Проверяем документы и договор, чтобы вы ни за что не переплатили и ничего не упустили.</p><p class="price">20 000 ₽</p></div></li>
+        <li><h3>Сделка дистанционно</h3><div class="st__more"><p>Подписание и регистрация без поездки на юг: порядок согласуем под ваш объект.</p><p class="price price--free">0 ₽ при покупке новостройки</p></div></li>
+        <li><h3>Ремонт</h3><div class="st__more"><p>Если нужно: отделка квартиры или дома под ключ.</p><p class="price">от 12 000 ₽ за м²</p></div></li>
+        <li><h3>Строительство дома</h3><div class="st__more"><p>Если нужен частный дом: построим на вашем участке.</p><p class="price">от 48 000 ₽ за м²</p></div></li>
+      </ol>
+      <div class="track" id="track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="scene__stage" id="stage">
+      <canvas id="gl" aria-label="Трёхмерная модель дома, который достраивается по мере прокрутки" role="img"></canvas>
+      <div class="stack" id="stack" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- GIFTS -->
+<section class="sec gifts" id="gifts">
+  <div class="head" data-r>
+    <h2>К сделке — подарок</h2>
+    <p class="head__p">Под каждый тип покупки свой. Условия называем на старте и записываем в договор.</p>
+  </div>
+  <div class="gifts__row">
+    <article class="doc doc--pass" data-r>
+      <div class="pass__main">
+        <h3>Путёвка за границу</h3>
+        <p class="doc__k">Элитная и инвестиционная недвижимость</p>
+        <p class="pass__to">В ОАЭ или на Алтай: выбираете сами.</p>
+        <svg class="pass__bars" viewBox="0 0 120 30" width="120" height="30" aria-hidden="true"><path d="M2 0h3v30H2zM8 0h1v30H8zM12 0h4v30h-4zM19 0h1v30h-1zM23 0h3v30h-3zM29 0h2v30h-2zM34 0h1v30h-1zM38 0h4v30h-4zM45 0h1v30h-1zM49 0h3v30h-3zM55 0h2v30h-2zM60 0h4v30h-4zM67 0h1v30h-1zM71 0h3v30h-3zM77 0h1v30h-1zM81 0h4v30h-4zM88 0h2v30h-2zM93 0h1v30h-1zM97 0h3v30h-3zM103 0h2v30h-2zM108 0h4v30h-4zM115 0h3v30h-3z" fill="#0d2530"/></svg>
+      </div>
+      <div class="pass__stub">
+        <p class="pass__big">Билет на двоих</p>
+      </div>
+    </article>
+    <article class="doc doc--slip" data-r>
+      <h3>1 платёж по ипотеке</h3>
+        <p class="doc__k">Новостройка с ипотекой</p>
+      <p>Месяц ипотеки платим мы.</p>
+      <p class="slip__sum">за наш счёт</p>
+      <span class="stamp" aria-hidden="true">Оплачено</span>
+    </article>
+    <article class="doc doc--bill" data-r>
+      <h3>Коммуналка и клининг</h3>
+        <p class="doc__k">Вторичный рынок</p>
+      <ul class="bill">
+        <li><span>Коммунальные платежи, 1 месяц</span><b>за наш счёт</b></li>
+        <li><span>Клининг после переезда</span><b>в подарок</b></li>
+      </ul>
+      <span class="stamp stamp--b" aria-hidden="true">Оплачено</span>
+    </article>
+  </div>
+</section>
+
+<!-- PRICE / receipt -->
+<section class="sec price-sec" id="price">
+  <div class="head" data-r>
+    <h2>Что вы платите брокеру</h2>
+    <p class="head__p">Соберите свою сделку. Смета пересчитается сразу, как чек.</p>
+  </div>
+  <div class="calc" data-r>
+    <form class="calc__ctl" id="calc" onsubmit="return false">
+      <fieldset>
+        <legend>Что покупаете</legend>
+        <label class="opt"><input type="radio" name="kind" value="new" checked><span>Новостройку</span></label>
+        <label class="opt"><input type="radio" name="kind" value="resale"><span>Вторичное жильё</span></label>
+        <label class="opt"><input type="radio" name="kind" value="resort"><span>Курортную или элитную</span></label>
+        <label class="opt"><input type="radio" name="kind" value="biz"><span>Коммерческую или промышленную</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Что добавить</legend>
+        <label class="chk"><input type="checkbox" name="legal"><span>Юридическое сопровождение</span></label>
+        <label class="chk"><input type="checkbox" name="repair"><span>Ремонт</span></label>
+        <label class="chk"><input type="checkbox" name="house"><span>Строительство частного дома</span></label>
+      </fieldset>
+      <label class="rng" id="areaWrap">
+        <span>Площадь для ремонта или дома: <b id="areaOut">60 м²</b></span>
+        <input type="range" id="area" min="20" max="300" step="5" value="60">
+      </label>
+    </form>
+    <div class="receipt" id="receipt" aria-live="polite">
+      <p class="receipt__t">Смета сделки</p>
+      <ul class="receipt__rows" id="rows"></ul>
+      <div class="receipt__sum"><span>Итого</span><b id="sum">0 ₽</b></div>
+      <p class="receipt__gift" id="gift"></p>
+      <p class="receipt__note">Расчёт ориентировочный. Цены и подарок фиксируем в договоре.</p>
+      <a class="btn btn--block" id="fix" href="#lead">Зафиксировать условия</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq" id="faq">
+  <div class="head" data-r>
+    <h2>Вопросы до заявки</h2>
+  </div>
+  <div class="faq__list" data-r>
+    <div class="q"><button class="q__b" aria-expanded="false"><span>Как купить, не приезжая?</span><i aria-hidden="true"></i></button><div class="q__a"><p>Объект показываем по видеосвязи, документы получаете в электронном виде. Подписание и регистрацию организуем дистанционно. Если для вашего объекта понадобится выезд, скажем об этом заранее.</p></div></div>
+    <div class="q"><button class="q__b" aria-expanded="false"><span>Дорого ли это для меня?</span><i aria-hidden="true"></i></button><div class="q__a"><p>Подбор и ведение новостройки, а также одобрение ипотеки на новостройку для вас бесплатны. Платные только дополнительные услуги: юрист 20 000 ₽, одобрение ипотеки на вторичку 5 000 ₽, ремонт и строительство. Все цены видны выше.</p></div></div>
+    <div class="q"><button class="q__b" aria-expanded="false"><span>Ипотеку точно одобрят?</span><i aria-hidden="true"></i></button><div class="q__a"><p>Решение принимает банк, мы его не гарантируем. Зато готовим заявку, подбираем программу и ведём вас до одобрения.</p></div></div>
+    <div class="q"><button class="q__b" aria-expanded="false"><span>Когда действует подарок?</span><i aria-hidden="true"></i></button><div class="q__a"><p>Подарок зависит от типа покупки: путёвка, платёж по ипотеке или коммуналка с клинингом. Условия обсуждаем на первой консультации и записываем в договор.</p></div></div>
+    <div class="q"><button class="q__b" aria-expanded="false"><span>Вы работаете с компаниями?</span><i aria-hidden="true"></i></button><div class="q__a"><p>Да. Подбираем коммерческую и крупную промышленную недвижимость для бизнеса и инвесторов.</p></div></div>
+  </div>
+</section>
+
+<!-- LEAD -->
+<section class="sec lead" id="lead">
+  <div class="lead__pic" data-r>
+    <img src="assets/anapa.jpg" width="1024" height="768" alt="Берег у Анапы с высоты" loading="lazy">
+  </div>
+  <div class="lead__body" data-r>
+    <h2>Расскажите, что ищете</h2>
+    <p class="head__p">Оставьте контакт, и мы вернёмся с подборкой. Без звонков в рекламных целях.</p>
+    <form class="form" id="leadForm" novalidate>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="calc" id="calcField">
+      <label>Имя<input name="name" autocomplete="name" required></label>
+      <label>Телефон или Telegram<input name="phone" type="tel" autocomplete="tel" placeholder="+7 или @ник" required></label>
+      <div class="form__2">
+        <label>Для чего<select name="goal"><option>Для жизни</option><option>Для инвестиций</option><option>Для бизнеса</option></select></label>
+        <label>Город<select name="city" id="citySel"><option>Анапа</option><option>Краснодар</option><option>Новороссийск</option><option>Сочи</option><option>Адлер</option><option>Геленджик</option><option>Темрюк</option><option>Майкоп</option><option>Адыгея</option><option>Железноводск</option><option>Пока не знаю</option></select></label>
+      </div>
+      <label>Бюджет и пожелания<textarea name="wish" rows="3" placeholder="Например: новостройка у моря, до 10 млн"></textarea></label>
+      <button class="btn btn--block" type="submit">Получить подборку</button>
+      <p class="form__ok" id="formMsg" role="status"></p>
+      <p class="form__legal">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p class="foot__big" aria-hidden="true">Недвижимость Юга</p>
+  <p class="foot__row"><span>Брокер по новостройкам и инвестиционной недвижимости. Краснодарский край, Адыгея, Железноводск.</span><a href="privacy.html">Политика конфиденциальности</a></p>
+  <p class="credits">Фотографии: <a href="https://commons.wikimedia.org/w/index.php?curid=141899728">«Вид на Геленджикскую бухту»</a>, Anna Novikova, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=165420589">«Sochi 2009 01»</a>, Perituss, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en/">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=181468754">«Guyguqey, Anapa»</a>, Artemii1000, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, через Wikimedia Commons.</p>
+</footer>
+
+<script src="script.js"></script>
+<script type="module" src="scene3d.js"></script>
+</body>
+</html>
